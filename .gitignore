@@ -1,0 +1,40 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+
+# Binaries
+/bin/
+/cmd/main
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+__debug_bin*
+
+# Test & coverage
+*.test
+*.out
+coverage.*
+*.coverprofile
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Go workspace
+go.work
+go.work.sum
+
+# Vendor (bỏ comment nếu không commit vendor)
+# vendor/
+
+# Logs & temp
+*.log
+tmp/
+CLAUDE.md
