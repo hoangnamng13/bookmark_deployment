@@ -4,7 +4,7 @@ services:
     container_name: redis
 
   bookmark_service:
-    image: bookmark_management:dev
+    image: 183359298/ebvn-k06_bookmark_service:v1.0.0
     restart: always
     container_name: bookmark_service
     depends_on:
