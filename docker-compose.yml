@@ -5,7 +5,6 @@ services:
 
   bookmark_service:
     image: bookmark_management:dev
-    build: .
     restart: always
     container_name: bookmark_service
     depends_on:
