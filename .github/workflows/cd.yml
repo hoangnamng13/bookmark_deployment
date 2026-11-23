@@ -1,0 +1,21 @@
+name: ci-pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  ci-pipeline:
+    runs-on: self-hosted
+    env:
+      DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+    steps:
+      - name: Deploy Application
+        working-directory: /root/bookmark_deployment
+        run: |
+          echo "Deploying..."
+          git pull
+          docker rm -f bookmark_service
+          docker compose pull bookmark_service
+          docker compose up -d bookmark_service
+          docker system prune -f
+
